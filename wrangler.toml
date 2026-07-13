@@ -1,0 +1,7 @@
+# Static landing page (website/) — used by Cloudflare `npx wrangler deploy`
+name = "drivematelk"
+compatibility_date = "2025-07-13"
+
+[assets]
+directory = "./website"
+not_found_handling = "404-page"

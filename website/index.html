@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveMate LK — Your intelligent vehicle companion</title>
+    <meta
+      name="description"
+      content="DriveMate LK helps Sri Lankan drivers with Scan Fault AI, fuel tracking, reminders, documents, expenses and trusted garages — all in one app."
+    />
+    <meta property="og:title" content="DriveMate LK" />
+    <meta
+      property="og:description"
+      content="AI vehicle guidance, reminders, fuel, documents and garages — built for Sri Lanka."
+    />
+    <meta property="og:image" content="../assets/drivemate-lk-social-banner.png" />
+    <link rel="icon" href="./img/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="nav-brand" href="#top">
+        <img src="./img/icon.png" alt="" width="36" height="36" />
+        <span>DriveMate <em>LK</em></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#scan">Scan Fault</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-green nav-cta-mobile" href="#download">Get the app</a>
+      </nav>
+      <a class="btn btn-green nav-cta" href="#download">Get the app</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Built for Sri Lankan vehicle owners</p>
+          <h1>
+            Your vehicle’s
+            <span class="rotator" aria-live="polite">
+              <span data-words="digital health record,AI fault scanner,fuel &amp; expense hub,garage finder">digital health record</span>
+            </span>
+          </h1>
+          <p class="lead">
+            Scan dashboard warnings, track fuel and expenses, never miss a reminder, and find
+            trusted nearby workshops — one app for the road ahead.
+          </p>
+          <div class="store-row" id="download">
+            <a class="store-badge store-badge--apple" data-store="ios" href="#" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+              <svg class="store-badge__logo" viewBox="0 0 16 20" aria-hidden="true">
+                <path fill="currentColor" d="M13.3 10.6c0-2.1 1.7-3.1 1.8-3.2-.9-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.1.8-.7 0-1.6-.7-2.7-.7-1.4 0-2.6.8-3.3 2-.1.2-1.3 3.7 1 6.2.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7c1.1 0 1.8-1 2.5-2 .8-1.1 1.1-2.2 1.1-2.3 0 0-2.1-.8-2.3-3.3zM10.6 4.5c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.5.9.1 1.9-.5 2.5-1.1z"/>
+              </svg>
+              <span class="store-badge__text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a class="store-badge store-badge--google" data-store="android" href="#" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+              <svg class="store-badge__logo store-badge__logo--play" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#00A0FF" d="M3.6 2.3c-.4.2-.6.6-.6 1.1v17.2c0 .5.2.9.6 1.1l10.2-9.7L3.6 2.3z"/>
+                <path fill="#FFD500" d="M16.1 14.4l-2.3-2.3-10.2 9.7c.2.1.5.1.7 0l11.8-6.7v-.7z"/>
+                <path fill="#FF3A44" d="M16.1 9.6v-.7L4.3 2.2c-.2-.1-.5-.1-.7 0l10.2 9.7 2.3-2.3z"/>
+                <path fill="#00F076" d="M21.2 11.1l-5.1-2.9-2.4 2.4 2.4 2.4 5.1-2.9c.8-.5.8-1.5 0-2z"/>
+              </svg>
+              <span class="store-badge__text">
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+          <p class="hero-note">Coming soon to App Store &amp; Google Play · Update links in <code>js/config.js</code></p>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-phones">
+            <div class="iphone iphone--behind" aria-hidden="true">
+              <div class="iphone__frame">
+                <div class="iphone__screen">
+                  <div class="iphone__island"></div>
+                  <img src="./img/shots/home.png" alt="" class="iphone__shot" />
+                  <div class="iphone__home"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="iphone iphone--front">
+              <div class="iphone__btn iphone__btn--silent"></div>
+              <div class="iphone__btn iphone__btn--vol-up"></div>
+              <div class="iphone__btn iphone__btn--vol-down"></div>
+              <div class="iphone__btn iphone__btn--power"></div>
+              <div class="iphone__frame">
+                <div class="iphone__screen">
+                  <div class="iphone__island" aria-hidden="true"></div>
+                  <video
+                    class="hero-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    webkit-playsinline
+                    preload="auto"
+                    poster="./img/shots/home.png"
+                    aria-label="DriveMate LK app demo"
+                  >
+                    <source src="./img/shots/hero.mp4" type="video/mp4" />
+                  </video>
+                  <div class="iphone__home" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURE STRIP -->
+      <section class="strip" id="features">
+        <div class="strip-inner">
+          <article>
+            <span class="icon">⌁</span>
+            <h3>Scan Fault</h3>
+            <p>Photo a warning light and get clear next-step guidance.</p>
+          </article>
+          <article>
+            <span class="icon">⛽</span>
+            <h3>Fuel Tracker</h3>
+            <p>Log fills, spend, and economy built for LKR.</p>
+          </article>
+          <article>
+            <span class="icon">🔔</span>
+            <h3>Smart Reminders</h3>
+            <p>Licence, insurance, service — before you’re late.</p>
+          </article>
+          <article>
+            <span class="icon">📍</span>
+            <h3>Trusted Garages</h3>
+            <p>Nearby workshops ranked by ratings, call or navigate.</p>
+          </article>
+          <article>
+            <span class="icon">📁</span>
+            <h3>Documents</h3>
+            <p>Keep ownership papers in one digital wallet.</p>
+          </article>
+          <article>
+            <span class="icon">💹</span>
+            <h3>Expenses</h3>
+            <p>See where your vehicle money really goes.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SCAN FAULT FEATURE -->
+      <section class="feature-block" id="scan">
+        <div class="feature-text">
+          <p class="eyebrow">AI diagnostics</p>
+          <h2>Scan Fault when a lamp comes on</h2>
+          <p>
+            Capture your dashboard warning light. DriveMate LK analyses the photo, explains what it
+            may mean, and suggests practical next steps — plus nearby workshops when you need help.
+          </p>
+          <ul class="checks">
+            <li>Camera or gallery capture</li>
+            <li>Expandable causes &amp; fixes</li>
+            <li>Google-rated garages near you</li>
+          </ul>
+          <a class="btn btn-green" href="#download">Download DriveMate LK</a>
+        </div>
+        <figure class="feature-phone">
+          <img data-shot="scan-fault" alt="Scan Fault app screenshot" />
+        </figure>
+      </section>
+
+      <!-- OWNERSHIP FEATURE -->
+      <section class="feature-block reverse">
+        <div class="feature-text">
+          <p class="eyebrow">Ownership hub</p>
+          <h2>Everything about your vehicle, organised</h2>
+          <p>
+            Fuel, expenses, maintenance, reminders and documents live together — so you’re ready for
+            renewals, workshops, and resale.
+          </p>
+          <ul class="checks">
+            <li>Car, van, bike &amp; 3-wheel support</li>
+            <li>Multi-vehicle profiles</li>
+            <li>Built for Sri Lankan roads</li>
+          </ul>
+        </div>
+        <div class="shot-grid">
+          <figure><img data-shot="mylist" alt="Vehicles list screenshot" /></figure>
+          <figure><img data-shot="scan-fault2" alt="Scan Fault results screenshot" /></figure>
+          <figure class="wide"><img data-shot="garages" alt="Garages screenshot" /></figure>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="how" id="how">
+        <div class="section-head">
+          <p class="eyebrow">Simple flow</p>
+          <h2>Still managing your car the hard way?</h2>
+          <p>DriveMate LK makes ownership clearer from day one.</p>
+        </div>
+        <div class="steps">
+          <article>
+            <span class="step-num">01</span>
+            <h3>Add your vehicle</h3>
+            <p>Car, van, motor bike or 3 wheel — with Sri Lanka–aware make &amp; model suggestions.</p>
+          </article>
+          <article>
+            <span class="step-num">02</span>
+            <h3>Scan or log</h3>
+            <p>Scan a fault lamp, add fuel, save documents, or set reminders in seconds.</p>
+          </article>
+          <article>
+            <span class="step-num">03</span>
+            <h3>Act with confidence</h3>
+            <p>Follow guidance, call a nearby garage, or stay ahead of renewals.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="gallery" id="screens">
+        <div class="section-head">
+          <p class="eyebrow">Inside the app</p>
+          <h2>Designed for the drive</h2>
+        </div>
+        <div class="gallery-track" data-gallery>
+          <figure class="gallery-card"><img data-shot="home" alt="Home" /><figcaption>Home</figcaption></figure>
+          <figure class="gallery-card"><img data-shot="scan-fault" alt="Scan Fault" /><figcaption>Scan Fault</figcaption></figure>
+          <figure class="gallery-card"><img data-shot="scan-fault2" alt="Scan results" /><figcaption>Scan results</figcaption></figure>
+          <figure class="gallery-card"><img data-shot="garages" alt="Garages" /><figcaption>Garages</figcaption></figure>
+          <figure class="gallery-card"><img data-shot="mylist" alt="My vehicles" /><figcaption>My vehicles</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions drivers ask</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>What is DriveMate LK?</summary>
+            <p>
+              DriveMate LK is an intelligent vehicle companion for Sri Lanka — combining AI fault
+              guidance, fuel &amp; expense tracking, reminders, documents and nearby garages in one app.
+            </p>
+          </details>
+          <details>
+            <summary>Is Scan Fault a confirmed diagnosis?</summary>
+            <p>
+              No. Scan Fault provides general guidance only. Always confirm with a qualified mechanic
+              when safety is uncertain.
+            </p>
+          </details>
+          <details>
+            <summary>Which vehicles are supported?</summary>
+            <p>Phase one focuses on Car, Van, Motor Bike and 3 Wheel — with Sri Lanka–relevant makes and models.</p>
+          </details>
+          <details>
+            <summary>Do I need an account?</summary>
+            <p>Yes. Creating an account keeps your vehicles, documents and history synced securely.</p>
+          </details>
+          <details>
+            <summary>Where can I download it?</summary>
+            <p>App Store and Google Play links will appear in the download section once listings go live.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="cta">
+        <div class="cta-card">
+          <h2>Your journey starts with DriveMate <em>LK</em></h2>
+          <p>Because looking after your vehicle should be the easiest part of your day.</p>
+          <div class="store-row center">
+            <a class="store-badge store-badge--apple" data-store="ios" href="#" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+              <svg class="store-badge__logo" viewBox="0 0 16 20" aria-hidden="true">
+                <path fill="currentColor" d="M13.3 10.6c0-2.1 1.7-3.1 1.8-3.2-.9-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.1.8-.7 0-1.6-.7-2.7-.7-1.4 0-2.6.8-3.3 2-.1.2-1.3 3.7 1 6.2.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7c1.1 0 1.8-1 2.5-2 .8-1.1 1.1-2.2 1.1-2.3 0 0-2.1-.8-2.3-3.3zM10.6 4.5c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.5.9.1 1.9-.5 2.5-1.1z"/>
+              </svg>
+              <span class="store-badge__text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a class="store-badge store-badge--google" data-store="android" href="#" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+              <svg class="store-badge__logo store-badge__logo--play" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#00A0FF" d="M3.6 2.3c-.4.2-.6.6-.6 1.1v17.2c0 .5.2.9.6 1.1l10.2-9.7L3.6 2.3z"/>
+                <path fill="#FFD500" d="M16.1 14.4l-2.3-2.3-10.2 9.7c.2.1.5.1.7 0l11.8-6.7v-.7z"/>
+                <path fill="#FF3A44" d="M16.1 9.6v-.7L4.3 2.2c-.2-.1-.5-.1-.7 0l10.2 9.7 2.3-2.3z"/>
+                <path fill="#00F076" d="M21.2 11.1l-5.1-2.9-2.4 2.4 2.4 2.4 5.1-2.9c.8-.5.8-1.5 0-2z"/>
+              </svg>
+              <span class="store-badge__text">
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <img src="./img/icon.png" alt="" width="40" height="40" />
+        <div>
+          <strong>DriveMate <em>LK</em></strong>
+          <p>Your intelligent vehicle companion</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#download">Download</a>
+        <a href="mailto:support@drivematelk.lk">Contact</a>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> DriveMate LK · Built for Sri Lankan vehicle owners</p>
+    </footer>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

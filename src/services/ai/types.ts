@@ -1,0 +1,27 @@
+export type {
+  AIProvider,
+  CanContinueDriving,
+  DashboardAnalysis,
+  DashboardImageInput,
+  DashboardSymbolSeverity,
+  DetectedDashboardSymbol,
+  DocumentExtraction,
+  DocumentExtractionInput,
+  ImageQuality,
+  InspectionFinding,
+  InspectionFindingSeverity,
+  ResaleAdvice,
+  ResaleAdviceInput,
+  ResaleConfidence,
+  SymptomAnalysis,
+  SymptomAnalysisInput,
+  SymptomRiskLevel,
+  VehicleChatContext,
+  VehicleChatInput,
+  VehicleChatMessage,
+  VehicleChatResponse,
+  VehicleInspectionInput,
+  VehicleInspectionResult,
+} from '@/types/ai';
+
+export { AI_SAFETY_DISCLAIMER } from '@/types/ai';

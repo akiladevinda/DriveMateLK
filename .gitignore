@@ -10,7 +10,6 @@ web-build/
 expo-env.d.ts
 
 # Native
-.kotlin/
 *.orig.*
 *.jks
 *.p8
@@ -31,11 +30,36 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
+.env.development
+.env.production
+
+# Large source videos (use compressed website/img/shots/hero.mp4 instead)
+assets/screenshot/*.MOV
+assets/screenshot/*.mov
 
 # typescript
 *.tsbuildinfo
 
-# generated native folders
-/ios
-/android
+# local image tooling
+.venv-img/
+.u2net/
+assets/*-opaque.png
+assets/preview-*-on-navy.jpg
+
+# testing
+coverage/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Supabase
+supabase/.branches
+supabase/.temp
+
+# EAS
+eas-update-manifest.json

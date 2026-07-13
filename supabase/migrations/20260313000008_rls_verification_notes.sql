@@ -1,0 +1,69 @@
+-- DriveMate LK: RLS verification notes (documentation only — no schema changes)
+--
+-- Purpose: manual checklist for validating row-level security with two test users.
+--
+-- Setup
+-- -----
+-- 1. Start local stack: `supabase start`
+-- 2. Apply migrations: `supabase db reset` (runs migrations + seed.sql)
+-- 3. Create two auth users via Studio or:
+--      curl -X POST 'http://127.0.0.1:54321/auth/v1/signup' \
+--        -H 'apikey: <anon_key>' -H 'Content-Type: application/json' \
+--        -d '{"email":"user-a@test.lk","password":"TestPass123!"}'
+--      curl -X POST 'http://127.0.0.1:54321/auth/v1/signup' \
+--        -H 'apikey: <anon_key>' -H 'Content-Type: application/json' \
+--        -d '{"email":"user-b@test.lk","password":"TestPass123!"}'
+-- 4. Sign in each user and capture JWT access tokens (user_a_token, user_b_token).
+--
+-- Vehicle isolation
+-- -----------------
+-- As User A (Authorization: Bearer user_a_token):
+--   insert into vehicles (user_id, registration_number, make, model, manufacture_year)
+--   values ('<user_a_uuid>', 'ABC-1234', 'Toyota', 'Axio', 2018);
+--   select * from vehicles;  -- expect 1 row
+-- As User B:
+--   select * from vehicles;  -- expect 0 rows (not a member)
+--   update vehicles set nickname = 'Hacked' where registration_number = 'ABC-1234';
+--   -- expect 0 rows updated
+--
+-- Vehicle membership
+-- ------------------
+-- As User A, invite User B as viewer via vehicle_members or vehicle_invitations.
+-- After User B accepts (accepted_at set):
+--   User B select on vehicles / fuel_entries / documents should succeed for that vehicle_id.
+--   User B insert/update should fail unless role is manager.
+--
+-- Storage paths
+-- -------------
+-- Upload to bucket `vehicle-documents` with path `<user_a_uuid>/rc.pdf` using User A token — OK.
+-- Same path with User B token — expect storage RLS violation.
+--
+-- Public garage reads
+-- -------------------
+-- Anonymous or any authenticated user:
+--   select business_name from garages where is_demo = true;  -- seeded demo garages visible
+-- Unpublished non-demo garage rows should not appear unless owner_user_id = auth.uid().
+--
+-- AI usage
+-- --------
+-- User A inserts ai_usage_events for self — OK.
+-- User A cannot select ai_usage_events where user_id = User B.
+--
+-- Subscription entitlements
+-- -------------------------
+-- Each signup creates one subscription_entitlements row via handle_new_user trigger.
+-- User A cannot select User B entitlement row.
+--
+-- Service role bypass (admin scripts only)
+-- ----------------------------------------
+-- The Supabase service_role key bypasses RLS — never embed in mobile app.
+-- Use only in Edge Functions / server jobs when explicitly required.
+--
+-- Quick SQL session impersonation (psql)
+-- --------------------------------------
+--   set request.jwt.claim.sub = '<user_a_uuid>';
+--   set role authenticated;
+--   select * from public.fuel_entries;
+-- Reset with: reset role;
+
+select 'RLS verification notes migration applied' as note;

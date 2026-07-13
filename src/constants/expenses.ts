@@ -1,0 +1,62 @@
+export const ExpenseCategory = {
+  FUEL: 'fuel',
+  SERVICE: 'service',
+  REPAIR: 'repair',
+  INSURANCE: 'insurance',
+  REVENUE_LICENCE: 'revenue_licence',
+  EMISSION_TEST: 'emission_test',
+  TIRES: 'tires',
+  BATTERY: 'battery',
+  PARKING: 'parking',
+  HIGHWAY_TOLL: 'highway_toll',
+  CLEANING: 'cleaning',
+  ACCESSORIES: 'accessories',
+  MODIFICATION: 'modification',
+  LEASING: 'leasing',
+  INSPECTION: 'inspection',
+  ROADSIDE_ASSISTANCE: 'roadside_assistance',
+  OTHER: 'other',
+} as const;
+
+export type ExpenseCategoryValue =
+  (typeof ExpenseCategory)[keyof typeof ExpenseCategory];
+
+export const EXPENSE_CATEGORIES: readonly ExpenseCategoryValue[] = [
+  ExpenseCategory.FUEL,
+  ExpenseCategory.SERVICE,
+  ExpenseCategory.REPAIR,
+  ExpenseCategory.INSURANCE,
+  ExpenseCategory.REVENUE_LICENCE,
+  ExpenseCategory.EMISSION_TEST,
+  ExpenseCategory.TIRES,
+  ExpenseCategory.BATTERY,
+  ExpenseCategory.PARKING,
+  ExpenseCategory.HIGHWAY_TOLL,
+  ExpenseCategory.CLEANING,
+  ExpenseCategory.ACCESSORIES,
+  ExpenseCategory.MODIFICATION,
+  ExpenseCategory.LEASING,
+  ExpenseCategory.INSPECTION,
+  ExpenseCategory.ROADSIDE_ASSISTANCE,
+  ExpenseCategory.OTHER,
+] as const;
+
+export const EXPENSE_CATEGORY_LABELS: Record<ExpenseCategoryValue, string> = {
+  [ExpenseCategory.FUEL]: 'Fuel',
+  [ExpenseCategory.SERVICE]: 'Service',
+  [ExpenseCategory.REPAIR]: 'Repair',
+  [ExpenseCategory.INSURANCE]: 'Insurance',
+  [ExpenseCategory.REVENUE_LICENCE]: 'Revenue Licence',
+  [ExpenseCategory.EMISSION_TEST]: 'Emission Test',
+  [ExpenseCategory.TIRES]: 'Tires',
+  [ExpenseCategory.BATTERY]: 'Battery',
+  [ExpenseCategory.PARKING]: 'Parking',
+  [ExpenseCategory.HIGHWAY_TOLL]: 'Highway Toll',
+  [ExpenseCategory.CLEANING]: 'Cleaning',
+  [ExpenseCategory.ACCESSORIES]: 'Accessories',
+  [ExpenseCategory.MODIFICATION]: 'Modification',
+  [ExpenseCategory.LEASING]: 'Leasing',
+  [ExpenseCategory.INSPECTION]: 'Inspection',
+  [ExpenseCategory.ROADSIDE_ASSISTANCE]: 'Roadside Assistance',
+  [ExpenseCategory.OTHER]: 'Other',
+};

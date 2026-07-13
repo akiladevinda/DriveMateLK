@@ -1,0 +1,7 @@
+# Cloudflare Pages / Workers static assets — landing site only
+name = "drivematelk"
+compatibility_date = "2025-07-13"
+
+[assets]
+directory = "."
+not_found_handling = "404-page"

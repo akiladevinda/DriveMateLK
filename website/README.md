@@ -43,11 +43,20 @@ appStoreUrl: 'https://apps.apple.com/...',
 playStoreUrl: 'https://play.google.com/store/apps/details?id=com.drivematelk.app',
 ```
 
-## Deploy
+## Deploy (Cloudflare Pages)
 
-Publish the `website/` folder (screenshots are already under `website/img/shots/`).
-When you add new shots to `assets/screenshot/`, copy them again:
+This folder is a **static** site. Do not build the Expo app at the repo root.
 
-```bash
-cp -f assets/screenshot/*.png website/img/shots/
-```
+In Cloudflare → your project → **Settings** → **Build**:
+
+| Setting | Value |
+|--------|--------|
+| Root directory | `website` |
+| Build command | *(empty / None)* |
+| Deploy command | `npx wrangler deploy` |
+| Path | `/` (relative to root directory) |
+
+Important: Root directory must be **`website`**, not `/`.  
+Using `/` runs `npm ci` on the Expo app and fails.
+
+After saving, retry the deployment.
